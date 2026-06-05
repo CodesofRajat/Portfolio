@@ -146,7 +146,21 @@ url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&au
       max-width:700px;
       margin-top:20px;
     }
+     /* ABOUT */
+#about{
+    padding: 100px 0;
+}
 
+.about-img{
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about p{
+    line-height: 1.8;
+}
     /* SKILLS */
 
     .skill-box{

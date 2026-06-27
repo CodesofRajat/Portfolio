@@ -331,7 +331,7 @@ textarea{
 
 /* Wordpress site background images */
 .defence{  background-image:url('/images/defence.png');}
-
+.ncclasses{  background-image:url('/images/ncclasses.png');}
 
 /* Figma designs background image  */
 .banner1{  background-image:url('/images/banner1.jpeg');}
@@ -345,7 +345,9 @@ textarea{
 }
 
     @media(max-width:768px){
-
+ #home{
+ min-height:10vh;
+    }
       .sidebar .logo {
     order:1;
     }

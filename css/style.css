@@ -16,7 +16,17 @@
       text-decoration:none;
     }
 
-    /* LEFT SIDEBAR */
+#home::before {
+    content: "";
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background: url('/images/banner.svg') no-repeat right center;
+    opacity: 0.2;
+    position: absolute;
+    background-size: contain;
+    right: 0;
+}
 
     .sidebar{
   width:260px;
@@ -343,8 +353,26 @@ textarea{
  .sidebar  .navbar{
   display:none;
 }
-
+.up{
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+.up-first{
+  padding-top: 0px;
+}
+.clr{
+  color:white;
+}
     @media(max-width:768px){
+      #home::before {
+
+    height: 35vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-70%, -70%);
+
+
+}
  #home{
  min-height:10vh;
     }
@@ -412,7 +440,7 @@ margin:20px 0 50px 0;
     }
 
 
-    .gallery-columns{
+    /* .gallery-columns{
     column-count:3;
     column-gap:20px;
 }
@@ -427,6 +455,19 @@ margin:20px 0 50px 0;
 
 .gallery-columns img:hover{
     transform:scale(1.03);
+} */
+
+.gallery-columns{
+    column-count: 3;
+    column-gap: 15px;
+}
+
+.gallery-img{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: block;
+    break-inside: avoid;
 }
 
 @media(max-width:992px){
@@ -438,5 +479,61 @@ margin:20px 0 50px 0;
 @media(max-width:576px){
     .gallery-columns{
         column-count:1;
+    }
+}
+
+.menu-btn {
+    display: none;
+order: 3;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+  
+    margin-left: -20px;
+}
+ul.mb-menu li a {
+    color: #060606;
+  
+}
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        top: 112px;
+        right: 20px;
+        background: #fff;
+        width: 220px;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,.2);
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .menu.show {
+        display: block;
+    }
+
+    .menu li {
+        list-style: none;
+        margin: 15px 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #000;
     }
 }
